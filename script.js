@@ -5,9 +5,10 @@ const divide = (arr, n) => {
 	const ans =[];
 	let subArr = [];
 	let sum = 0;
-	for(let i = 0; i <= arr.length, i++){
+	for(let i = 0; i <= arr.length; i++){
 		if(sum + arr[i] <= n){
 			subArr.push(arr[i]);
+			sum+=arr[i];
 		}else{
 			ans.push(subArr);
 			subArr=[arr[i]];
@@ -15,10 +16,10 @@ const divide = (arr, n) => {
 		}
 	}
 	if(subArr.length > 0){
-		ans.push(subArr)
+		ans.push(subArr);
 	}
 	return ans;
 };
 
-const n = prompt("Enter n: ");
-alert(JSON.stringify(divide(arr, n)));
+// const n = prompt("Enter n: ");
+// alert(JSON.stringify(divide(arr, n)));
